@@ -3,32 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
-</head>
-<body>
-    <div class="timer-input-section">
-        <p> Set Time :</p>
-        <label for="hours"></label>
-        <input type="number" id="hours" min="0" placeholder="hh">
-        <label for="minutes"></label>
-        <input type="number" id="minutes" min="0" max="60" placeholder="mm">
-        <label for="seconds"></label>
-        <input type="number" id="seconds" min="0" max="60" placeholder="ss">
-        <button onclick="startNewTimer()">set</button>
-    </div>
-    <div>
-        <p class="Currenct">Currenct Times</p></div>
+    <title>Timer</title>
+    <link rel="stylesheet" href="./styles.css">
 
-    <div class="active-timers-section" id="activeTimers"></div>
-<audio controls id="music">
-    <source src="./mixkit-retro-game-emergency-alarm-1000.wav">
-</audio>
-    <script src="script.js"></script>
+</head>
+<body>
+    <main>
+        <h3>Multiple Timers App</h3>
+        <div id="timer-card" class="timer-card">
+            <span>Set Time :</span>
+            <span id="timer-container">
+                <input id="hour" type="number" min="0" max="24" placeholder="hh">
+                :<input id="minute" type="number" min="0" max="60" placeholder="mm">
+                :<input id="seconds" type="number" min="0" max="60" placeholder="ss">
+            </span>
+            <button id="set-btn">Set</button>
+        </div>
+
+
+       
+        <section>
+            <h4 id="current-timers">Current Timers</h3>
+            <div id="active-timers-container">
+                <span id="no-timers-display-msg">You have no timers currently</span>
+            </div>
+        </section>
+        <audio id="audio-file">
+            <!-- <source src="Ringtone/sari-duniya-jala-denge-ringtone-tkkb.mp3" /> -->
+            <source src="./mixkit-retro-game-emergency-alarm-1000.wav" />
+        </audio>
+    </main>
+
+ 
+
+    <script src="./script.js"></script>
 </body>
 </html>
