@@ -53,6 +53,7 @@ function addNewTimer() {
                       <button class="btn delete-btn" onclick="deleteTimer(this)">Stop</button>
                   `;
         audio.play();
+        audio.loop=true;
         clearInterval(myTimerUpdate);
       } else {
         --totalTime;
